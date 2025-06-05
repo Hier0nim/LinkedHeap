@@ -23,7 +23,6 @@ A C# library providing a custom unmanaged‐memory heap manager, along with unsa
 
    * [Creating a `CustomHeap<T>`](#creating-a-customheapt)
    * [Using `HeapStack<T>` and `HeapQueue<T>`](#using-heapstackt-and-heapqueuet)
-   * [Dependency Injection via `LinkedHeapService<T>`](#dependency-injection-via-linkedheapservicet)
 ---
 
 ## Features
