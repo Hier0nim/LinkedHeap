@@ -3,10 +3,16 @@
 
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+  inputs.nixCats = {
+    url = "github:Hier0nim/nvim";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
   outputs =
     {
       self,
       nixpkgs,
+      nixCats,
     }:
     let
       supportedSystems = [
@@ -32,6 +38,9 @@
             packages = [
               pkgs.dotnetCorePackages.dotnet_10.sdk
               pkgs.dotnetPackages.Nuget
+              pkgs.netcoredbg
+
+              nixCats.packages.x86_64-linux.nvim-dotnet
             ];
           };
         }

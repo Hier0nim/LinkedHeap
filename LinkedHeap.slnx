@@ -6,4 +6,5 @@
   </Configurations>
   <Project Path="LinkedHeap/LinkedHeap.csproj" />
   <Project Path="LinkedHeap.Tests/LinkedHeap.Tests.csproj" />
+  <Project Path="LinkedHeap.Demo/LinkedHeap.Demo.csproj" />
 </Solution>
