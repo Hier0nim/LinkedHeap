@@ -39,6 +39,7 @@
               pkgs.dotnetCorePackages.dotnet_10.sdk
               pkgs.dotnetPackages.Nuget
               pkgs.netcoredbg
+              pkgs.python3
 
               nixCats.packages.x86_64-linux.nvim-dotnet
             ];
