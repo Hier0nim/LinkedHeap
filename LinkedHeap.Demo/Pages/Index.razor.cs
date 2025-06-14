@@ -294,6 +294,26 @@ namespace LinkedHeap.Demo.Pages
       return ((HeapNode<int>*)ptr)->Next;
     }
 
+    /// <summary>
+    /// Determines if the given pointer belongs to a stack node.
+    /// </summary>
+    /// <param name="ptr">Pointer (as <see cref="IntPtr"/>) to a <see cref="HeapNode{int}"/>.</param>
+    /// <returns><c>true</c> if the pointer is part of the stack; otherwise <c>false</c>.</returns>
+    private bool IsStackNode(IntPtr ptr)
+    {
+      return MyStack.GetNodePointers().Contains(ptr);
+    }
+
+    /// <summary>
+    /// Determines if the given pointer belongs to a queue node.
+    /// </summary>
+    /// <param name="ptr">Pointer (as <see cref="IntPtr"/>) to a <see cref="HeapNode{int}"/>.</param>
+    /// <returns><c>true</c> if the pointer is part of the queue; otherwise <c>false</c>.</returns>
+    private bool IsQueueNode(IntPtr ptr)
+    {
+      return MyQueue.GetNodePointers().Contains(ptr);
+    }
+
     #endregion
   }
 }

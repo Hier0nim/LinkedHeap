@@ -14,14 +14,20 @@
   font-size: 0.9rem;
 }
 
-/* In-use nodes are light green; free nodes light gray */
-.heap-cell.used {
-  background-color: #c8e6c9;
-}
+  .heap-cell.stack-node {
+    background-color: #00bcd4; /* jasny niebieski dla stosu */
+    border-color: #00bcd4;
+  }
 
-.heap-cell.free {
-  background-color: #f5f5f5;
-}
+  .heap-cell.queue-node {
+    background-color: #ff9800; /* jasny pomarańczowy dla kolejki */
+    border-color: #ff9800;
+  }
+
+
+  .heap-cell.free {
+    background-color: #f5f5f5;
+  }
 
 /* “free” label italic */
 .free-label {
