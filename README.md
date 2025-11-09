@@ -88,7 +88,7 @@ Optionally for the demo you can use zipped compiled Blazor WASM app in the ./Lin
 
 ### Creating a `CustomHeap<T>`
 
-```c_sharp
+```csharp
 using System;
 using LinkedHeap;
 
@@ -123,7 +123,7 @@ public class Example
 
 ### Using `HeapStack<T>` and `HeapQueue<T>`
 
-```c_sharp
+```csharp
 using System;
 using System.Collections.Generic;
 using LinkedHeap;
