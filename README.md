@@ -18,7 +18,6 @@ A C# library providing a custom unmanaged‐memory heap manager, along with unsa
 
    * [Prerequisites](#prerequisites)
    * [Installation](#installation)
-   * [Building from Source](#building-from-source)
 3. [Usage](#usage)
 
    * [Creating a `CustomHeap<T>`](#creating-a-customheapt)
@@ -62,36 +61,26 @@ A C# library providing a custom unmanaged‐memory heap manager, along with unsa
 
 ### Prerequisites
 
-* [.NET 10.0 SDK (Preview)](https://dotnet.microsoft.com/download/dotnet/10.0)
-* A code editor or IDE that supports C# 10 / .NET 10 (e.g., Visual Studio 2022, Rider, VS Code, Neovim with [roslyn.nvim](https://github.com/seblyng/roslyn.nvim) plugin).
-* For Blazor Demo: Modern web browser (Chrome, Edge, Firefox, Safari).
-
-> All projects target **net10.0**. Make sure your `dotnet --version` is a 10.0 preview (e.g., `10.0.100-preview.xxxx`).
+* [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) > 9.0.200 for the .slnx support
 
 ### Installation
 
    Clone this repository and build locally:
 
    ```bash
-   git clone https://github.com/Hier0nim/LinkedHeap.git
-   cd LinkedHeap
-   dotnet build
+    git clone https://github.com/Hier0nim/LinkedHeap.git
+    cd LinkedHeap
+    dotnet restore
+    dotnet build   # Builds Library, Tests, and Demo
+    dotnet test    # Runs all NUnit tests
+    cd LinkedHeap.Demo
+    dotnet run     # Launches Blazor WASM demo (https://localhost:7106)
    ```
 
-   * The library (`LinkedHeap/`) will compile to `bin/Debug/net10.0/LinkedHeap.dll` by default.
    * Unit tests live under `LinkedHeap.Tests/`.
    * A Blazor Demo is under `LinkedHeap.Demo/`.
 
-### Building from Source
-
-```bash
-# From the repository root
-dotnet restore
-dotnet build   # Builds Library, Tests, and Demo
-dotnet test    # Runs all NUnit tests
-cd LinkedHeap.Demo
-dotnet run     # Launches Blazor WASM demo (https://localhost:7106)
-```
+Optionally for the demo you can use zipped compiled Blazor WASM app in the ./LinkedHeap.zip with simple scipt serving static files
 
 ---
 
@@ -99,7 +88,7 @@ dotnet run     # Launches Blazor WASM demo (https://localhost:7106)
 
 ### Creating a `CustomHeap<T>`
 
-```csharp
+```c_sharp
 using System;
 using LinkedHeap;
 
@@ -134,7 +123,7 @@ public class Example
 
 ### Using `HeapStack<T>` and `HeapQueue<T>`
 
-```csharp
+```c_sharp
 using System;
 using System.Collections.Generic;
 using LinkedHeap;
